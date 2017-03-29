@@ -40,6 +40,16 @@ $(document).ready(function() {
             curBlock.find('.recommend-menu li:first').addClass('active');
             if (curBlock.find('.recommend-menu li').length > 0) {
                 curBlock.find('.recommend-menu').show();
+                switch (curBlock.find('.recommend-menu li').length) {
+                    case 2:
+                        curBlock.find('.recommend-menu').addClass('recommend-menu-2');
+                        break;
+                    case 3:
+                        curBlock.find('.recommend-menu').addClass('recommend-menu-3');
+                        break;
+                    default:
+                        break;
+                }
             }
             curBlock.find('.recommend-tab:first').addClass('active');
         }
@@ -63,6 +73,83 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.product-photo-preview ul li a').click(function(e) {
+        var curLink = $(this);
+        var curLi = curLink.parent();
+        if (!curLink.parent().hasClass('active')) {
+            $('.product-photo-preview ul li.active').removeClass('active');
+            curLi.addClass('active');
+            $('.product-photo-big img').attr('src', curLink.attr('href'));
+        }
+        e.preventDefault();
+    });
+
+    $('.product-tabs-menu li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            var curIndex = $('.product-tabs-menu li').index(curLi);
+            $('.product-tabs-menu li.active').removeClass('active');
+            curLi.addClass('active');
+            $('.product-tab-content.active').removeClass('active');
+            $('.product-tab-content').eq(curIndex).addClass('active');
+        }
+        e.preventDefault();
+    });
+
+    $('.product-tabs-menu-prev').click(function(e) {
+        var curIndex = $('.product-tabs-menu li').index($('.product-tabs-menu li.active'));
+        curIndex--;
+        if (curIndex < 0) {
+            curIndex = $('.product-tabs-menu li').length - 1;
+        }
+        $('.product-tabs-menu li').eq(curIndex).find('a').click();
+        e.preventDefault();
+    });
+
+    $('.product-tabs-menu-next').click(function(e) {
+        var curIndex = $('.product-tabs-menu li').index($('.product-tabs-menu li.active'));
+        curIndex++;
+        if (curIndex > $('.product-tabs-menu li').length - 1) {
+            curIndex = 0;
+        }
+        $('.product-tabs-menu li').eq(curIndex).find('a').click();
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.product-photo-big-inner a', function(e) {
+        var curArray = [];
+        $('.product-photo-preview a').each(function() {
+            curArray.push({src: $(this).attr('rel')});
+        });
+        var curIndex = $('.product-photo-preview li').index($('.product-photo-preview li.active'));
+        $.fancybox.open(curArray, {
+                baseTpl	: '<div class="fancybox-container" role="dialog" tabindex="-1">' +
+                    '<div class="fancybox-bg"></div>' +
+                    '<div class="fancybox-controls">' +
+                        '<div class="fancybox-infobar">' +
+                            '<button data-fancybox-previous class="fancybox-button fancybox-button--left" title="Предыдущая"></button>' +
+                            '<div class="fancybox-infobar__body">' +
+                                '<span class="js-fancybox-index"></span>&nbsp;/&nbsp;<span class="js-fancybox-count"></span>' +
+                            '</div>' +
+                            '<button data-fancybox-next class="fancybox-button fancybox-button--right" title="Следующая"></button>' +
+                        '</div>' +
+                        '<div class="fancybox-buttons">' +
+                            '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="Закрыть (Esc)"></button>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="fancybox-slider-wrap">' +
+                        '<div class="fancybox-slider"></div>' +
+                    '</div>' +
+                    '<div class="fancybox-caption-wrap"><div class="fancybox-caption"></div></div>' +
+                '</div>',
+                slideShow : false,
+                fullScreen : false,
+                thumbs : false
+            },
+            curIndex
+        );
+    });
+
 });
 
 $(window).on('resize', function() {
@@ -82,6 +169,8 @@ $(window).on('load resize', function() {
             curBlock.addClass('hidden');
         }
     });
+
+    $('.product-photo-big-inner').css({'line-height': $('.product-photo-big-inner').height() + 'px'});
 });
 
 function initForm(curForm) {

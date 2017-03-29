@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/chosen/chosen.css" />
         <link rel="stylesheet" href="js/jquery-ui-1.11.4.spinner/jquery-ui.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
 
         <script src="js/jquery-2.2.4.min.js"></script>
         <script src="js/chosen/chosen.jquery.min.js"></script>
@@ -15,6 +16,7 @@
         <script src="js/validation/jquery.validate.min.js"></script>
         <script src="js/validation/messages_ru.js"></script>
         <script src="js/jquery-ui-1.11.4.spinner/jquery-ui.min.js"></script>
+        <script src="js/fancybox/jquery.fancybox.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width" />
@@ -159,6 +161,286 @@
                             </ul>
                         </div>
                         <!-- side menu END -->
+
+                        <!-- bx filter -->
+                        <div class="bx_filter bx_green">
+                            <div class="bx_filter_section">
+                                <div class="bx_filter_title">Подбор параметров</div>
+                                <form name="_form" action="/catalog/komplekty-upravleniya-zvukom/?SECTION_CODE=komplekty-upravleniya-zvukom" method="get" class="smartfilter">
+                                                <input type="hidden" name="SECTION_CODE" id="SECTION_CODE" value="komplekty-upravleniya-zvukom" />
+                                                    <div class="bx_filter_parameters_box active">
+                                            <span class="bx_filter_container_modef"></span>
+                                            <div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)">Цена</div>
+                                            <div class="bx_filter_block">
+                                                <div class="bx_filter_parameters_box_container">
+                                                                                <div class="bx_filter_parameters_box_container_block">
+                                                            <div class="bx_filter_input_container">
+                                                                <input
+                                                                    class="min-price"
+                                                                    type="text"
+                                                                    name="arrFilter_9_MIN"
+                                                                    id="arrFilter_9_MIN"
+                                                                    value=""
+                                                                    size="5"
+                                                                    onkeyup="smartFilter.keyup(this)"
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                        <div class="bx_filter_parameters_box_container_block">
+                                                            <div class="bx_filter_input_container">
+                                                                <input
+                                                                    class="max-price"
+                                                                    type="text"
+                                                                    name="arrFilter_9_MAX"
+                                                                    id="arrFilter_9_MAX"
+                                                                    value=""
+                                                                    size="5"
+                                                                    onkeyup="smartFilter.keyup(this)"
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                        <div style="clear: both;"></div>
+
+                                                        <div class="bx_ui_slider_track" id="drag_track_9">
+                                                                                                <div class="bx_ui_slider_part p1"><span>117.8</span></div>
+                                                            <div class="bx_ui_slider_part p2"><span>230.8</span></div>
+                                                            <div class="bx_ui_slider_part p3"><span>343.8</span></div>
+                                                            <div class="bx_ui_slider_part p4"><span>456.8</span></div>
+                                                            <div class="bx_ui_slider_part p5"><span>570.4</span></div>
+
+                                                            <div class="bx_ui_slider_pricebar_VD" style="left: 0;right: 0;" id="colorUnavailableActive_9"></div>
+                                                            <div class="bx_ui_slider_pricebar_VN" style="left: 0;right: 0;" id="colorAvailableInactive_9"></div>
+                                                            <div class="bx_ui_slider_pricebar_V"  style="left: 0;right: 0;" id="colorAvailableActive_9"></div>
+                                                            <div class="bx_ui_slider_range" 	id="drag_tracker_9"  style="left: 0;right: 0;">
+                                                                <a class="bx_ui_slider_handle left"  style="left:0;" href="javascript:void(0)" id="left_slider_9"></a>
+                                                                <a class="bx_ui_slider_handle right" style="right:0;" href="javascript:void(0)" id="right_slider_9"></a>
+                                                            </div>
+                                                        </div>
+                                                                                        <script type="text/javascript">
+                                                            BX.ready(function(){
+                                                                window['trackBar9'] = new BX.Iblock.SmartFilter({'leftSlider':'left_slider_9','rightSlider':'right_slider_9','tracker':'drag_tracker_9','trackerWrap':'drag_track_9','minInputId':'arrFilter_9_MIN','maxInputId':'arrFilter_9_MAX','minPrice':'117.8','maxPrice':'570.4','curMinPrice':'','curMaxPrice':'','fltMinPrice':'117.8','fltMaxPrice':'570.4','precision':'2','colorUnavailableActive':'colorUnavailableActive_9','colorAvailableActive':'colorAvailableActive_9','colorAvailableInactive':'colorAvailableInactive_9'});
+                                                            });
+                                                        </script>
+                                                                                </div>
+                                                <div class="clb"></div>
+                                            </div>
+                                        </div>
+                                                    <div class="bx_filter_parameters_box active">
+                                            <span class="bx_filter_container_modef">
+                                            <div class="bx_filter_popup_result right" id="modef" style="display: none;">
+							Выбрано: <span id="modef_num">21</span>							<span class="arrow"></span>
+							<a href="/catalog/komplekty-upravleniya-zvukom/?SECTION_CODE=komplekty-upravleniya-zvukom&amp;%3FSECTION_CODE=komplekty-upravleniya-zvukom&amp;set_filter=y&amp;arrFilter_10_4088798008=Y&amp;arrFilter_10_1842515611=Y">Показать</a>
+						</div>
+                                            </span>
+                                            <div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)">Назначение</div>
+                                            <div class="bx_filter_block">
+                                                <div class="bx_filter_parameters_box_container">
+                                                                                                                    <label data-role="label_arrFilter_10_4088798008" class="bx_filter_param_label " for="arrFilter_10_4088798008">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_10_4088798008"
+                                                                        id="arrFilter_10_4088798008"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="ARTSOUND">настольный</span>
+                                                                </span>
+                                                            </label>
+                                                                                            <label data-role="label_arrFilter_10_1842515611" class="bx_filter_param_label " for="arrFilter_10_1842515611">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_10_1842515611"
+                                                                        id="arrFilter_10_1842515611"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="EISSOUND">промышленный</span>
+                                                                </span>
+                                                            </label>
+                                                                                            <label data-role="label_arrFilter_10_1842515612" class="bx_filter_param_label " for="arrFilter_10_1842515612">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_10_1842515612"
+                                                                        id="arrFilter_10_1842515612"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="EISSOUND">мобильный</span>
+                                                                </span>
+                                                            </label>
+                                                                                                        </div>
+                                                <div class="clb"></div>
+                                            </div>
+                                        </div>
+                                                    <div class="bx_filter_parameters_box active">
+                                            <span class="bx_filter_container_modef"></span>
+                                            <div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)">Вид термопечати</div>
+                                            <div class="bx_filter_block">
+                                                <div class="bx_filter_parameters_box_container">
+                                                                                                                    <label data-role="label_arrFilter_11_3539032470" class="bx_filter_param_label " for="arrFilter_11_3539032470">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_11_3539032470"
+                                                                        id="arrFilter_11_3539032470"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="Бельгия">термо</span>
+                                                                </span>
+                                                            </label>
+                                                                                            <label data-role="label_arrFilter_11_219140800" class="bx_filter_param_label " for="arrFilter_11_219140800">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_11_219140800"
+                                                                        id="arrFilter_11_219140800"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="Испания">термотрансфер</span>
+                                                                </span>
+                                                            </label>
+                                                                                                        </div>
+                                                <div class="clb"></div>
+                                            </div>
+                                        </div>
+                                                    <div class="bx_filter_parameters_box active">
+                                            <span class="bx_filter_container_modef"></span>
+                                            <div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)">Принцип работы</div>
+                                            <div class="bx_filter_block">
+                                                <div class="bx_filter_parameters_box_container">
+                                                                                                                    <label data-role="label_arrFilter_12_766302424" class="bx_filter_param_label " for="arrFilter_12_766302424">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_12_766302424"
+                                                                        id="arrFilter_12_766302424"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="бизнес">лазерный линейный</span>
+                                                                </span>
+                                                            </label>
+                                                                                            <label data-role="label_arrFilter_12_3172189513" class="bx_filter_param_label " for="arrFilter_12_3172189513">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_12_3172189513"
+                                                                        id="arrFilter_12_3172189513"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="влажные">лазерный многоплоскостной</span>
+                                                                </span>
+                                                            </label>
+                                                                                            <label data-role="label_arrFilter_12_16083495" class="bx_filter_param_label " for="arrFilter_12_16083495">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_12_16083495"
+                                                                        id="arrFilter_12_16083495"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="жилые">фотолинейный</span>
+                                                                </span>
+                                                            </label>
+                                                                                            <label data-role="label_arrFilter_12_1521215566" class="bx_filter_param_label " for="arrFilter_12_1521215566">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_12_1521215566"
+                                                                        id="arrFilter_12_1521215566"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="улица">имидж-сканер</span>
+                                                                </span>
+                                                            </label>
+                                                                                            <label data-role="label_arrFilter_12_1521215567" class="bx_filter_param_label " for="arrFilter_12_1521215567">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_12_1521215567"
+                                                                        id="arrFilter_12_1521215567"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="улица">встраиваемый</span>
+                                                                </span>
+                                                            </label>
+                                                                                            <label data-role="label_arrFilter_12_1521215568" class="bx_filter_param_label " for="arrFilter_12_1521215568">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_12_1521215568"
+                                                                        id="arrFilter_12_1521215568"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="улица">беспроводной</span>
+                                                                </span>
+                                                            </label>
+                                                                                                        </div>
+                                                <div class="clb"></div>
+                                            </div>
+                                        </div>
+                                                    <div class="bx_filter_parameters_box active">
+                                            <span class="bx_filter_container_modef"></span>
+                                            <div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)">Операционная система</div>
+                                            <div class="bx_filter_block">
+                                                <div class="bx_filter_parameters_box_container">
+                                                                                                                    <label data-role="label_arrFilter_13_3916527423" class="bx_filter_param_label " for="arrFilter_13_3916527423">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_13_3916527423"
+                                                                        id="arrFilter_13_3916527423"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="в потолок">windows</span>
+                                                                </span>
+                                                            </label>
+                                                                                            <label data-role="label_arrFilter_13_3771153172" class="bx_filter_param_label " for="arrFilter_13_3771153172">
+                                                                <span class="bx_filter_input_checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        value="Y"
+                                                                        name="arrFilter_13_3771153172"
+                                                                        id="arrFilter_13_3771153172"
+                                                                                                                        onclick="smartFilter.click(this)"
+                                                                    />
+                                                                    <span class="bx_filter_param_text" title="в стену">android</span>
+                                                                </span>
+                                                            </label>
+                                                                                                        </div>
+                                                <div class="clb"></div>
+                                            </div>
+                                        </div>
+                                                <div class="clb"></div>
+                                    <div class="bx_filter_button_box active">
+                                        <div class="bx_filter_block">
+                                            <div class="bx_filter_parameters_box_container">
+                                                <input class="bx_filter_search_button" type="submit" id="set_filter" name="set_filter" value="Показать" />
+                                                <input class="bx_filter_search_reset" type="submit" id="del_filter" name="del_filter" value="Сбросить" />
+
+                                                <div class="bx_filter_popup_result right" id="modef" style="display:none" style="display: inline-block;">
+                                                    Выбрано: <span id="modef_num">0</span>							<span class="arrow"></span>
+                                                    <a href="/catalog/komplekty-upravleniya-zvukom/?SECTION_CODE=komplekty-upravleniya-zvukom&amp;set_filter=y">Показать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div style="clear: both;"></div>
+                            </div>
+                        </div>
+                        <!-- bx filter END -->
 
                     </div>
                     <!-- side END -->
@@ -547,6 +829,7 @@
 
                             </div>
                             <!-- catalogue recommend END -->
+
                             <!-- catalogue text -->
                             <div class="catalogue-text">
                                 <h2>О продукте</h2>
