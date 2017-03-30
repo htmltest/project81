@@ -177,13 +177,19 @@ $(document).ready(function() {
         pauseOnHover: false,
         pauseOnDotsHover: false,
         speed: sliderSpeed
-    }).on('afterChange', function(event, slick, currentSlide) {
+    }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
         $('.slider-ctrl a span').stop(true, true).css({'width': 0});
         $('.slider-ctrl a.active').removeClass('active');
-        $('.slider-ctrl a').eq(currentSlide).addClass('active');
+        $('.slider-ctrl a').eq(nextSlide).addClass('active');
         $('.slider-ctrl a.active span').animate({'width': '100%'}, sliderPeriod, 'linear');
     });
     $('.slider-ctrl a.active span').animate({'width': '100%'}, sliderPeriod, 'linear');
+
+    $('body').on('click', '.slider-ctrl a', function(e) {
+        var curIndex = $('.slider-ctrl a').index($(this));
+        $('.slider-content').slick('slickGoTo', curIndex);
+        e.preventDefault();
+    });
 
     $('.brands-list-inner').slick({
         infinite: true,

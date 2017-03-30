@@ -95,7 +95,7 @@ li ol li:before {content:counter(point)'.'counter(subpoint); counter-increment:s
 .btn-reset:hover {border-color:#81808b; color:#81808b}
 .btn-reset:active {border-color:#0cb009; color:#81808b}
 
-.wrapper form {margin:50px 0; padding:1px 30px 25px 30px; background:#fff}
+form {margin:50px 0; padding:1px 30px 25px 30px; background:#fff}
 
 .form-success {position:relative; text-align:center; background:#f8fdf8; border:1px solid #e5f6e5; padding:23px 30px 26px 30px; margin:25px 0}
 .form-success-title {color:#0cb009; text-transform:uppercase; font-weight:bold}
@@ -612,6 +612,26 @@ header {padding:33px 0 32px 0; background:#fff}
 @media screen and (max-width:1199px) {
     .map-detail {display:none}
 }
+
+.search-ctrl {margin:50px 0}
+h1+.search-ctrl {margin:30px 0 13px 0}
+.search-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.search-results-form {float:left; display:table; width:770px; margin:0; padding:0; background:none}
+.search-results-form .form-row {display:table-cell; vertical-align:top; margin:0}
+.search-results-form .form-field {display:block}
+.search-results-form .form-input input {border-color:#fff; box-shadow:0 1px 1px rgba(0, 0, 0, .07)}
+.search-results-form label.error {display:none !important}
+.search-results-form .form-submit {display:table-cell; margin:0; vertical-align:top; padding:0 0 0 10px; width:auto}
+
+.search-ctrl .pager {float:right; margin:0}
+.search-ctrl .pager a,
+.search-ctrl .pager span {height:50px; line-height:50px}
+
+.search-result {border-bottom:1px solid #e6e6e6; padding:36px 0 37px 0}
+.search-result a {text-decoration:underline}
+.search-result-section {text-transform:uppercase; font-weight:bold}
+.search-result-date {font-size:12px; padding:26px 0 0 0}
+.search-result-path {font-size:12px}
 
 footer {background:#fff; height:400px; margin:-400px 0 0 0; position:relative; min-width:480px; width:100%; overflow:hidden}
 
