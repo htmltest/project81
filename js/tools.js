@@ -1,3 +1,6 @@
+var sliderPeriod = 5000;
+var sliderSpeed  = 500;
+
 $(document).ready(function() {
 
     $.validator.addMethod('maskPhone',
@@ -148,6 +151,98 @@ $(document).ready(function() {
             },
             curIndex
         );
+    });
+
+    $('.slider').each(function() {
+        var curSlider = $(this);
+        var curHTML = '';
+        curSlider.find('.slider-item').each(function() {
+            curHTML += '<a href="#"><span></span></a>';
+        });
+        $('.slider-ctrl').html(curHTML);
+        $('.slider-ctrl a:first').addClass('active');
+    });
+
+    $('.slider-content').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        centerMode: true,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: sliderPeriod,
+        dots: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+        speed: sliderSpeed
+    }).on('afterChange', function(event, slick, currentSlide) {
+        $('.slider-ctrl a span').stop(true, true).css({'width': 0});
+        $('.slider-ctrl a.active').removeClass('active');
+        $('.slider-ctrl a').eq(currentSlide).addClass('active');
+        $('.slider-ctrl a.active span').animate({'width': '100%'}, sliderPeriod, 'linear');
+    });
+    $('.slider-ctrl a.active span').animate({'width': '100%'}, sliderPeriod, 'linear');
+
+    $('.brands-list-inner').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }
+        ]
+    });
+
+    $('.responses-item a').fancybox({
+        baseTpl	: '<div class="fancybox-container" role="dialog" tabindex="-1">' +
+            '<div class="fancybox-bg"></div>' +
+            '<div class="fancybox-controls">' +
+                '<div class="fancybox-infobar">' +
+                    '<button data-fancybox-previous class="fancybox-button fancybox-button--left" title="Предыдущая"></button>' +
+                    '<div class="fancybox-infobar__body">' +
+                        '<span class="js-fancybox-index"></span>&nbsp;/&nbsp;<span class="js-fancybox-count"></span>' +
+                    '</div>' +
+                    '<button data-fancybox-next class="fancybox-button fancybox-button--right" title="Следующая"></button>' +
+                '</div>' +
+                '<div class="fancybox-buttons">' +
+                    '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="Закрыть (Esc)"></button>' +
+                '</div>' +
+            '</div>' +
+            '<div class="fancybox-slider-wrap">' +
+                '<div class="fancybox-slider"></div>' +
+            '</div>' +
+            '<div class="fancybox-caption-wrap"><div class="fancybox-caption"></div></div>' +
+        '</div>',
+        slideShow : false,
+        fullScreen : false,
+        thumbs : false
+    });
+
+    $('.responses-list').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true,
+        arrows: false,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
 });
