@@ -251,7 +251,85 @@ $(document).ready(function() {
         ]
     });
 
+    $('#changeDelivery').change(function(e) {
+        var curValue = $(this).val();
+        $('.order-delivery-item.active').removeClass('active');
+        $('#delivery-' + curValue).addClass('active');
+        recalcCart();
+    });
+
+    $('.order-comment-link a').click(function(e) {
+        $('.order-comment-link').hide();
+        $('.order-comment').css({'display': 'block'});
+        e.preventDefault();
+    });
+
+    $('.basket-row-count input').on('spinstop', function(event, ui) {
+        recalcCart();
+    });
+
+    $('.basket-delete a').click(function(e) {
+        $(this).parents().filter('.basket-row').remove();
+        recalcCart();
+        e.preventDefault();
+    });
+
+    $('.compare-list').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: true,
+        arrows: false,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }
+        ]
+    }).on('setPosition', function(slick) {
+        $('.catalogue-list').each(function() {
+            resizeCatalogue($(this));
+        });
+        $('.slick-dots').css({'top': $('.catalogue-item-inner:first').outerHeight()});
+    });
+
 });
+
+function recalcCart() {
+    var curSumm = 0;
+    $('.checkout-cart .basket-row').each(function() {
+        var curRow = $(this);
+        curSumm += Number(curRow.find('.basket-row-count input').val()) * Number(curRow.find('.basket-row-price span').html().replace(' ', ''));
+    });
+    var curDeliveryPrice = 0;
+    if ($('.order-delivery-item.active').length > 0) {
+        if ($('.order-delivery-item.active .delivery-price').length > 0) {
+            curDeliveryPrice = Number($('.order-delivery-item.active .delivery-price').html());
+        }
+        if ($('.order-delivery-item.active .delivery-free').length > 0) {
+            var curDeliveryFree = Number($('.order-delivery-item.active .delivery-free').html());
+            if (curSumm >= curDeliveryFree) {
+                curDeliveryPrice = 0;
+            }
+        }
+    }
+
+    $('#basket-price').html(String(curSumm).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+    $('#basket-delivery').html(String(curDeliveryPrice).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+    var allSumm = curSumm + curDeliveryPrice + Number($('#basket-discount').html().replace(' ', ''));
+    if ($('#basket-coupon-value').length > 0) {
+        $('#basket-coupon-summ').html(String(-Math.round(allSumm * (Number($('#basket-coupon-value').html() / 100)))).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+        allSumm += Number($('#basket-coupon-summ').html().replace(' ', ''));
+    }
+    if (allSumm < 0) {
+        allSumm = 0;
+    }
+    $('#basket-summ').html(String(allSumm).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+}
 
 $(window).on('resize', function() {
     $('.form-select select').chosen('destroy');
@@ -480,6 +558,29 @@ function resizeCatalogue(curList) {
         var curTop = curBlock.offset().top;
 
         curList.find('.catalogue-item-name').each(function() {
+            var otherBlock = $(this);
+            if (otherBlock.offset().top == curTop) {
+                var newHeight = otherBlock.height();
+                if (newHeight > curHeight) {
+                    curBlock.css({'min-height': newHeight + 'px'});
+                } else {
+                    otherBlock.css({'min-height': curHeight + 'px'});
+                }
+            }
+        });
+    });
+
+    $('.compare-list-sep').css({'top': curList.find('.catalogue-item-inner:first').outerHeight()});
+    $('.slick-dots').css({'top': curList.find('.catalogue-item-inner:first').outerHeight()});
+
+    curList.find('.compare-info-row').css({'min-height': 0 + 'px'});
+
+    curList.find('.compare-info-row').each(function() {
+        var curBlock = $(this);
+        var curHeight = curBlock.height();
+        var curTop = curBlock.offset().top;
+
+        curList.find('.compare-info-row').each(function() {
             var otherBlock = $(this);
             if (otherBlock.offset().top == curTop) {
                 var newHeight = otherBlock.height();

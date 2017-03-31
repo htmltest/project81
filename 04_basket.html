@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Компания РБС-Групп</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i,900&amp;subset=cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/jquery-ui-1.11.4.spinner/jquery-ui.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+        <link rel="stylesheet" href="js/slick/slick.css" />
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/jquery-ui-1.11.4.spinner/jquery-ui.min.js"></script>
+        <script src="js/fancybox/jquery.fancybox.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="container">
+
+                        <a href="#" class="mobile-menu-link"></a>
+
+                        <div class="logo"><a href="#"><img src="images/logo.png" alt="" width="252" height="60" /></a></div>
+
+                        <div class="header-text">
+                            <div class="header-phone"><a href="tel:+74952283244">+7 (495) 228-32-44</a></div>
+                            <div class="header-schedule">Время работы: пн–пт, 10:00–18:00</div>
+                        </div>
+
+                        <div class="header-cart">
+                            <a href="#" class="header-cart-value"><span>2</span></a>
+                        </div>
+
+                        <a href="#" class="header-compare"></a>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"></a>
+                            <form action="#" method="post">
+                                <div class="form-input"><input type="text" name="search" value="" class="required" /></div>
+                                <div class="form-submit"><input type="submit" value="" /></div>
+                            </form>
+                        </div>
+
+                    </div>
+                </header>
+
+                <!-- nav -->
+                <div class="nav">
+                    <div class="container">
+                        <div class="menu-add">
+                            <a href="#" class="menu-add-link"></a>
+                        </div>
+
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#">Сканеры</a></li>
+                                <li><a href="#">Принтеры</a></li>
+                                <li><a href="#">Терминалы сбора данных</a></li>
+                                <li><a href="#">POS-системы</a></li>
+                                <li><a href="#">POS-Периферия</a></li>
+                                <li><a href="#">Банковское оборудование</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- nav END -->
+
+                <!-- container -->
+                <div class="container">
+
+                    <div class="breadcrumbs"><a href="#">RBS Group</a><span></span>Оформление заказа</div>
+
+                    <!-- content -->
+                    <div class="content">
+                        <div class="content-wrap">
+
+                            <!-- checkout -->
+                            <div class="checkout">
+
+                                <!-- checkout cart -->
+                                <div class="checkout-cart">
+                                    <h1>Подробности заказа</h1>
+
+                                    <form action="#" method="post">
+
+                                        <!-- basket row -->
+                                        <div class="basket-row">
+                                            <div class="basket-photo"><a href="#"><img src="files/basket-1.jpg" alt="" /></a></div>
+                                            <div class="basket-text">
+                                                <div class="basket-title"><a href="#">Беспроводной сканер штрих-кода Datalogic PSC QS 2130</a></div>
+                                                <div class="basket-art">Артикул: 1532645</div>
+                                            </div>
+                                            <div class="basket-row-count">
+                                                <div class="form-input"><input type="number" name="count[]" value="1" step="1" min="1" /></div>
+                                            </div>
+                                            <div class="basket-row-price"><span>15 500</span> &#8381;</div>
+                                            <div class="basket-delete"><a href="#"></a></div>
+                                        </div>
+                                        <!-- basket row END -->
+
+                                        <!-- basket row -->
+                                        <div class="basket-row">
+                                            <div class="basket-photo"><a href="#"><img src="files/basket-2.jpg" alt="" /></a></div>
+                                            <div class="basket-text">
+                                                <div class="basket-title"><a href="#">Ручной 2D сканер штрих-кода Symbol  Motorola</a></div>
+                                                <div class="basket-art">Артикул: 1532645</div>
+                                            </div>
+                                            <div class="basket-row-count">
+                                                <div class="form-input"><input type="number" name="count[]" value="1" step="1" min="1" /></div>
+                                            </div>
+                                            <div class="basket-row-price"><span>27 100</span> &#8381;</div>
+                                            <div class="basket-delete"><a href="#"></a></div>
+                                        </div>
+                                        <!-- basket row END -->
+
+                                        <!-- basket results -->
+                                        <div class="basket-results">
+                                            <div class="basket-info">
+                                                <div class="basket-info-row">
+                                                    <div class="basket-info-title">Стоимость товаров</div>
+                                                    <div class="basket-info-value"><span id="basket-price">42 600</span> &#8381;</div>
+                                                </div>
+                                                <div class="basket-info-row">
+                                                    <div class="basket-info-title">Доставка</div>
+                                                    <div class="basket-info-value"><span id="basket-delivery">500</span> &#8381;</div>
+                                                </div>
+                                                <div class="basket-info-row">
+                                                    <div class="basket-info-title">Скидка</div>
+                                                    <div class="basket-info-value"><span id="basket-discount">-2 020</span> &#8381;</div>
+                                                </div>
+                                                <div class="basket-info-row">
+                                                    <div class="basket-info-title">Скидка по купону</div>
+                                                    <div class="basket-info-value"><span id="basket-coupon-summ">-2 876</span> &#8381;</div>
+                                                    <div class="basket-info-discount"><span id="basket-coupon-value">7</span>%</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="basket-summ">
+                                                <div class="basket-summ-title">Итого</div>
+                                                <div class="basket-summ-value"><span id="basket-summ">38 204</span> &#8381;</div>
+                                            </div>
+                                        </div>
+                                        <!-- basket results END -->
+
+                                    </form>
+
+                                </div>
+                                <!-- checkout cart END -->
+
+                                <!-- checkout order -->
+                                <div class="checkout-order">
+                                    <h1>Оформление заказа <a href="#">Я уже покупал</a></h1>
+
+                                    <!-- checkout form -->
+                                    <div class="checkout-form">
+                                        <form action="#" method="post">
+                                            <div class="form-row">
+                                                <div class="form-label">Ваше ФИО</div>
+                                                <div class="form-field">
+                                                    <div class="form-input"><input type="text" name="name" value="" class="required" /></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="checkout-form-row">
+                                                <div class="form-row">
+                                                    <div class="form-label">E-mail</div>
+                                                    <div class="form-field">
+                                                        <div class="form-input"><input type="text" name="email" value="" class="required email" /></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="form-label">Телефон</div>
+                                                    <div class="form-field">
+                                                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-label">Адрес и способ доставки</div>
+                                                <div class="form-field">
+                                                    <div class="form-select">
+                                                        <select name="delivery" data-placeholder="Выберите значение" id="changeDelivery">
+                                                            <option value=""></option>
+                                                            <option value="1">Самовывоз из магазина</option>
+                                                            <option value="2" selected="selected">Доставка по Москве</option>
+                                                            <option value="3">Доставка почтой в Регионы</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="order-delivery">
+                                                        <div class="order-delivery-item" id="delivery-1">Стоимость: бесплатно</div>
+                                                        <div class="order-delivery-item active" id="delivery-2">Сроки доставки: 1-2 дня<br />Стоимость: <span class="delivery-price">500</span> &#8381;<br />Бесплатно от: <span class="delivery-free">50 000</span> &#8381;</div>
+                                                        <div class="order-delivery-item" id="delivery-3">Сроки доставки: 3-4 дня<br />Стоимость: <span class="delivery-price">1000</span> &#8381;<br />Бесплатно от: <span class="delivery-free">50 000</span> &#8381;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row order-comment-link">
+                                                <a href="#">Добавить комментарий к заказу</a>
+                                            </div>
+
+                                            <div class="form-row order-comment">
+                                                <div class="form-label">Комментарий к&nbsp;заказу <span>/ опционально</span></div>
+                                                <div class="form-field">
+                                                    <div class="form-input"><textarea name="comment" rows="5" cols="10"></textarea></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-field">
+                                                    <div class="form-submit"><input type="submit" value="Оформить заказ" class="btn-submit" /></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- checkout form END -->
+                                </div>
+                                <!-- checkout order END -->
+
+                            </div>
+                            <!-- checkout END -->
+
+                        </div>
+                    </div>
+                    <!-- content END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="container">
+
+                <div class="footer-contacts">
+                    <div class="footer-logo"><img src="images/logo.png" alt="" width="252" height="60" /></div>
+                    <dl>
+                        <dt>Телефон</dt>
+                        <dd><strong>+7 (495) 228-32-44</strong></dd>
+
+                        <dt>Адрес</dt>
+                        <dd>Москва, Ступинский пр-д, 7с1</dd>
+
+                        <dt>Время работы</dt>
+                        <dd>пн–пт, 10:00–18:00</dd>
+                    </dl>
+                </div>
+
+                <div class="footer-menu">
+                    <div class="footer-menu-catalogue">
+                        <div class="footer-menu-title">Каталог товаров</div>
+                        <ul>
+                            <li><a href="#">Сканеры</a></li>
+                            <li><a href="#">Принтеры</a></li>
+                            <li><a href="#">Терминалы</a></li>
+                            <li><a href="#">POS-системы</a></li>
+                            <li><a href="#">Pos-периферия</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Банковское оборудование</a></li>
+                            <li><a href="#">Весовое оборудование</a></li>
+                            <li><a href="#">ККТ онлайн 54-ФЗ</a></li>
+                            <li><a href="#">Расходные материалы</a></li>
+                            <li><a href="#">Ремонт оборудования</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu-nav">
+                        <div class="footer-menu-title">Информация</div>
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bottom">
+                <div class="container">
+                    <div class="copyrights">© Интернет-магазин RBS Group, 2016</div>
+                    <div class="developer">Разработка сайта: <a href="#" target="_blank">Bilingo Digital Studio</a></div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
