@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="js/jquery-ui-1.11.4.spinner/jquery-ui.css" />
         <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
         <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
 
         <script src="js/jquery-2.2.4.min.js"></script>
         <script src="js/chosen/chosen.jquery.min.js"></script>
@@ -19,6 +20,8 @@
         <script src="js/jquery-ui-1.11.4.spinner/jquery-ui.min.js"></script>
         <script src="js/fancybox/jquery.fancybox.min.js"></script>
         <script src="js/slick/slick.min.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width" />
@@ -33,8 +36,6 @@
                 <header>
                     <div class="container">
 
-                        <a href="#" class="mobile-menu-link"></a>
-
                         <div class="logo"><a href="#"><img src="images/logo.png" alt="" width="252" height="60" /></a></div>
 
                         <div class="header-text">
@@ -44,6 +45,39 @@
 
                         <div class="header-cart">
                             <a href="#" class="header-cart-value"><span>2</span></a>
+                            <div class="header-cart-window">
+                                <!-- basket row -->
+                                <div class="basket-row">
+                                    <div class="basket-photo"><a href="#"><img src="files/basket-1.jpg" alt="" /></a></div>
+                                    <div class="basket-text">
+                                        <div class="basket-title"><a href="#">Беспроводной сканер штрих-кода Datalogic PSC QS 2130</a></div>
+                                        <div class="basket-art">Артикул: 1532645</div>
+                                    </div>
+                                    <div class="basket-row-price">
+                                        15 500 &#8381;
+                                        <div class="basket-row-count-text">1 шт.</div>
+                                    </div>
+                                </div>
+                                <!-- basket row END -->
+
+                                <!-- basket row -->
+                                <div class="basket-row">
+                                    <div class="basket-photo"><a href="#"><img src="files/basket-1.jpg" alt="" /></a></div>
+                                    <div class="basket-text">
+                                        <div class="basket-title"><a href="#">Беспроводной сканер штрих-кода Datalogic PSC QS 2130</a></div>
+                                        <div class="basket-art">Артикул: 1532645</div>
+                                    </div>
+                                    <div class="basket-row-price">
+                                        15 500 &#8381;
+                                        <div class="basket-row-count-text">1 шт.</div>
+                                    </div>
+                                </div>
+                                <!-- basket row END -->
+                                <div class="header-cart-links">
+                                    <a href="#" class="header-cart-window-hide">Свернуть</a>
+                                    <a href="#" class="header-cart-window-order">Оформить заказ</a>
+                                </div>
+                            </div>
                         </div>
 
                         <a href="#" class="header-compare"></a>
@@ -64,6 +98,14 @@
                     <div class="container">
                         <div class="menu-add">
                             <a href="#" class="menu-add-link"></a>
+                            <ul>
+                                <li><a href="#">Каталог</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Доставка и оплата</a></li>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
                         </div>
 
                         <div class="menu">
@@ -91,6 +133,11 @@
 
                             <!-- product -->
                             <div class="product">
+
+                                <div class="product-header-mobile">
+                                    <div class="breadcrumbs"><a href="#">Сканеры</a><span></span><a href="#">Беспроводные</a></div>
+                                    <h1>Беспроводной сканер штрих-кода Datalogic PSC QS 2130</h1>
+                                </div>
 
                                 <!-- product left -->
                                 <div class="product-left">
@@ -130,16 +177,17 @@
 
                                     <div class="product-price">
                                         <div class="product-price-value">15 500 &#8381;</div>
+                                        <div class="product-price-old">17 200 &#8381;</div>
                                         <div class="product-price-available">Товар в наличии</div>
                                     </div>
 
                                     <div class="product-order">
-                                        <form action="#" method="post">
+                                        <form action="windows/basket.html" method="post">
                                             <div class="form-field">
                                                 <div class="form-input"><input type="number" name="count" value="1" step="1" min="1" /></div>
                                              </div>
                                             <a href="#" class="btn-submit">В корзину</a>
-                                            <a href="#" class="btn-reset">запросить оптовую цену</a>
+                                            <a href="windows/fast.html" class="btn-reset">запросить оптовую цену</a>
                                         </form>
                                     </div>
 
@@ -166,8 +214,7 @@
                                         <li><a href="#">Инструкции</a></li>
                                         <li><a href="#">Вопрос-ответ</a></li>
                                     </ul>
-                                    <a href="#" class="product-tabs-menu-prev"></a>
-                                    <a href="#" class="product-tabs-menu-next"></a>
+                                    <div class="product-tabs-menu-line"></div>
                                 </div>
                                 <!-- product tabs menu END -->
 
@@ -242,52 +289,76 @@
                                     <!-- docs -->
                                     <div class="docs">
                                         <div class="doc">
-                                            <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
+                                            <div class="doc-icon"><span class="doc-file-pdf">.PDF</span></div>
                                             <div class="doc-text">
-                                                <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND XЕ 752</a></div>
+                                                <div class="doc-title"><a href="#">Беспроводной сканер штрих-кода Datalogic PSC QS 2130</a></div>
                                                 <div class="doc-descr">Компоновка — вариация на классическую тему. Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</div>
+                                                <div class="doc-size">PDF, 25 КБ</div>
                                             </div>
-                                            <div class="doc-size">PDF<br />10 МБ</div>
                                         </div>
                                         <div class="doc">
-                                            <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
+                                            <div class="doc-icon"><span class="doc-file-xls">.XLS</span></div>
                                             <div class="doc-text">
-                                                <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND IX4</a></div>
-                                                <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</div>
+                                                <div class="doc-title"><a href="#">Беспроводной сканер штрих-кода Datalogic PSC QS 2130</a></div>
+                                                <div class="doc-descr">Компоновка — вариация на классическую тему. Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</div>
+                                                <div class="doc-size">XLS, 2 МБ</div>
                                             </div>
-                                            <div class="doc-size">PDF<br />10 МБ</div>
+                                        </div>
+                                        <div class="doc">
+                                            <div class="doc-icon"><span class="doc-file-doc">.doc</span></div>
+                                            <div class="doc-text">
+                                                <div class="doc-title"><a href="#">Беспроводной сканер штрих-кода Datalogic PSC QS 2130</a></div>
+                                                <div class="doc-descr">Компоновка — вариация на классическую тему. Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</div>
+                                                <div class="doc-size">DOC, 2 МБ</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- docs END -->
                                 </div>
 
                                 <div class="product-tab-content">
-                                    <h3>ЗАдать вопос</h3>
+                                    <h3>Задать вопрос</h3>
 
-                                    <form action="windows/success.html" method="post" class="faq-form ajaxForm">
+                                    <div class="faq-form-show"><a href="#" class="btn-submit">Задать вопрос</a></div>
+                                    <form action="windows/success.html" method="post" class="faq-form window-form">
                                         <div class="cols">
                                             <div class="col-third">
-                                                <div class="form-label">Имя <span>*</span></div>
-                                                <div class="form-input"><input name="name" value="" class="required" /></div>
+                                                <div class="form-row">
+                                                    <div class="form-label">Ваше ФИО</div>
+                                                    <div class="form-field">
+                                                        <div class="form-input"><input name="name" value="" class="required" /></div>
+                                                        <div class="form-hint">Например: Иван Васильев</div>
+                                                     </div>
+                                                 </div>
                                             </div>
                                             <div class="col-third">
-                                                <div class="form-label">E-mail <span>*</span></div>
-                                                <div class="form-input"><input name="email" value="" class="required email" /></div>
+                                                <div class="form-row">
+                                                    <div class="form-label">Ваше Email</div>
+                                                    <div class="form-field">
+                                                        <div class="form-input"><input name="email" value="" class="required email" /></div>
+                                                     </div>
+                                                 </div>
                                             </div>
                                             <div class="col-third">
-                                                <div class="form-label">Откуда вы</div>
-                                                <div class="form-input"><input name="from" value="" /></div>
+                                                <div class="form-row">
+                                                    <div class="form-label">Откуда вы <span>/ Опционально</span></div>
+                                                    <div class="form-field">
+                                                        <div class="form-input"><input name="from" value="" /></div>
+                                                     </div>
+                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="form-label">Ваш вопрос</div>
-                                        <div class="form-input"><textarea name="question" rows="5" cols="10"></textarea></div>
-
-                                        <div class="cols">
-                                            <div class="col-third">&nbsp;</div>
-                                            <div class="col-third">
-                                                <div class="form-submit"><input type="submit" value="Отправить" class="btn-submit" /></div>
+                                        <div class="form-row">
+                                            <div class="form-label">Ваш вопрос</div>
+                                            <div class="form-field">
+                                                <div class="form-input"><textarea name="question" rows="5" cols="10"></textarea></div>
                                             </div>
+                                        </div>
+
+                                        <div class="faq-form-ctrl">
+                                            <div class="form-submit"><input type="submit" value="Задать вопрос" class="btn-submit" /></div>
+                                            <div class="faq-form-hide"><a href="#">Свернуть</a></div>
                                         </div>
                                     </form>
 
@@ -422,7 +493,7 @@
                                     <!-- recommend tab END -->
 
                                     <!-- recommend tab -->
-                                    <div class="recommend-tab" data-title="Наши рекомендации">
+                                    <div class="recommend-tab" data-title="<span>Наши</span> рекомендации">
                                         <!-- catalogue list -->
                                         <div class="catalogue-list">
 

@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="js/jquery-ui-1.11.4.spinner/jquery-ui.css" />
         <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
         <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
 
         <script src="js/jquery-2.2.4.min.js"></script>
         <script src="js/chosen/chosen.jquery.min.js"></script>
@@ -19,6 +20,8 @@
         <script src="js/jquery-ui-1.11.4.spinner/jquery-ui.min.js"></script>
         <script src="js/fancybox/jquery.fancybox.min.js"></script>
         <script src="js/slick/slick.min.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width" />
@@ -33,8 +36,6 @@
                 <header>
                     <div class="container">
 
-                        <a href="#" class="mobile-menu-link"></a>
-
                         <div class="logo"><a href="#"><img src="images/logo.png" alt="" width="252" height="60" /></a></div>
 
                         <div class="header-text">
@@ -44,6 +45,39 @@
 
                         <div class="header-cart">
                             <a href="#" class="header-cart-value"><span>2</span></a>
+                            <div class="header-cart-window">
+                                <!-- basket row -->
+                                <div class="basket-row">
+                                    <div class="basket-photo"><a href="#"><img src="files/basket-1.jpg" alt="" /></a></div>
+                                    <div class="basket-text">
+                                        <div class="basket-title"><a href="#">Беспроводной сканер штрих-кода Datalogic PSC QS 2130</a></div>
+                                        <div class="basket-art">Артикул: 1532645</div>
+                                    </div>
+                                    <div class="basket-row-price">
+                                        15 500 &#8381;
+                                        <div class="basket-row-count-text">1 шт.</div>
+                                    </div>
+                                </div>
+                                <!-- basket row END -->
+
+                                <!-- basket row -->
+                                <div class="basket-row">
+                                    <div class="basket-photo"><a href="#"><img src="files/basket-1.jpg" alt="" /></a></div>
+                                    <div class="basket-text">
+                                        <div class="basket-title"><a href="#">Беспроводной сканер штрих-кода Datalogic PSC QS 2130</a></div>
+                                        <div class="basket-art">Артикул: 1532645</div>
+                                    </div>
+                                    <div class="basket-row-price">
+                                        15 500 &#8381;
+                                        <div class="basket-row-count-text">1 шт.</div>
+                                    </div>
+                                </div>
+                                <!-- basket row END -->
+                                <div class="header-cart-links">
+                                    <a href="#" class="header-cart-window-hide">Свернуть</a>
+                                    <a href="#" class="header-cart-window-order">Оформить заказ</a>
+                                </div>
+                            </div>
                         </div>
 
                         <a href="#" class="header-compare"></a>
@@ -51,7 +85,7 @@
                         <div class="header-search">
                             <a href="#" class="header-search-link"></a>
                             <form action="#" method="post">
-                                <div class="form-input"><input type="text" name="search" value="" class="required" /></div>
+                                <div class="form-input"><input type="text" name="search" value="" class="required" placeholder="Поиск по сайту" /></div>
                                 <div class="form-submit"><input type="submit" value="" /></div>
                             </form>
                         </div>
@@ -64,6 +98,14 @@
                     <div class="container">
                         <div class="menu-add">
                             <a href="#" class="menu-add-link"></a>
+                            <ul>
+                                <li><a href="#">Каталог</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Доставка и оплата</a></li>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
                         </div>
 
                         <div class="menu">
@@ -232,7 +274,7 @@
                                         </div>
                                                     <div class="bx_filter_parameters_box active">
                                             <span class="bx_filter_container_modef">
-                                            <div class="bx_filter_popup_result right" id="modef" style="display: none;">
+                                            <div class="bx_filter_popup_result right" id="modef">
 							Выбрано: <span id="modef_num">21</span>							<span class="arrow"></span>
 							<a href="/catalog/komplekty-upravleniya-zvukom/?SECTION_CODE=komplekty-upravleniya-zvukom&amp;%3FSECTION_CODE=komplekty-upravleniya-zvukom&amp;set_filter=y&amp;arrFilter_10_4088798008=Y&amp;arrFilter_10_1842515611=Y">Показать</a>
 						</div>
@@ -458,9 +500,16 @@
                             <div class="catalogue-header">
                                 <h1>Сканнеры Стационарные</h1>
 
+                                <a href="#" class="catalogue-filter-mobile-link"></a>
+
+                                <a href="#" class="side-menu-mobile-link">Свернуть</a>
+
                                 <div class="catalogue-sort">
-                                    <a href="#" class="down active">Цена</a>
-                                    <a href="#" class="down">Популярность</a>
+                                    <a href="#" class="catalogue-sort-link"></a>
+                                    <div class="catalogue-sort-inner">
+                                        <a href="#" class="down active">Цена</a>
+                                        <a href="#" class="down">Популярность</a>
+                                    </div>
                                 </div>
                             </div>
                             <!-- catalogue header END -->
@@ -475,6 +524,7 @@
                                         <div class="catalogue-item-name"><a href="#">Ручной одномерный сканер штрих-кода Datalogic QUICKSCAN</a></div>
                                         <div class="catalogue-item-ctrl">
                                             <div class="catalogue-item-price">15 500 &#8381;</div>
+                                            <div class="catalogue-item-price-old">17 500 &#8381;</div>
                                             <div class="catalogue-item-cart"><a href="windows/basket.html"></a><div>Товар добавлен <a href="#">в корзину</a></div><div>Добавить в корзину</div></div>
                                             <div class="catalogue-item-compare"><a href="#"></a><div>Товар добавлен <a href="#">в список сравнения</a></div><div>Добавить в список сравнения</div></div>
                                         </div>
@@ -754,7 +804,7 @@
                                     <!-- recommend tab END -->
 
                                     <!-- recommend tab -->
-                                    <div class="recommend-tab" data-title="Наши рекомендации">
+                                    <div class="recommend-tab" data-title="<span>Наши</span> рекомендации">
                                         <!-- catalogue list -->
                                         <div class="catalogue-list">
 
