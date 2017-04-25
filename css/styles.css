@@ -332,6 +332,8 @@ header {padding:33px 0 32px 0; background:#fff}
 }
 
 .menu-add {float:left; position:relative; margin:17px 0 0 0}
+.menu-add-logo {display:none; position:absolute; z-index:991; left:0; top:-109px; line-height:0}
+.menu-add.open .menu-add-logo {display:block}
 .menu-add-link {display:block; width:20px; height:16px; background:url(../images/menu-add-link.png)}
 .menu-add.open .menu-add-link {background-position:left -16px; position:relative; z-index:991}
 .menu-add ul {display:none; position:absolute; left:-30px; top:29px; z-index:990; width:230px; padding:0 40px 0 30px; background:#0cb009; margin:0; text-transform:uppercase; font-weight:bold}
