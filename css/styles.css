@@ -1073,10 +1073,11 @@ header {padding:33px 0 32px 0; background:#fff}
 .prefs-list {margin:50px -15px 0 -15px}
 .prefs-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .prefs-item {float:left; width:33.33%; padding:0 15px; box-sizing:border-box}
-.prefs-item-inner {background:#fff no-repeat left center; padding:36px 45px 0 100px; height:114px}
+.prefs-item-inner {display:block; background:#fff no-repeat left center; padding:37px 30px 0 100px; height:138px; color:#81808b}
+.prefs-item-inner:hover {color:#81808b; box-shadow:0 7px 50px rgba(0, 0, 0, .15)}
 .prefs-item-1 .prefs-item-inner {background-image:url(../images/pref-1.png)}
-.prefs-item-2 .prefs-item-inner {background-image:url(../images/pref-2.png)}
-.prefs-item-3 .prefs-item-inner {background-image:url(../images/pref-3.png)}
+.prefs-item-2 .prefs-item-inner {background-image:url(../images/pref-3.png)}
+.prefs-item-3 .prefs-item-inner {background-image:url(../images/pref-2.png)}
 .prefs-item-inner strong {color:#5f5f68; text-transform:uppercase}
 
 @media screen and (max-width:1199px) {
