@@ -1,11 +1,35 @@
 <div class="fast-window">
     <h3>Запросить оптовую цену</h3>
-    <div class="fast-window-text">Привлечение аудитории как всегда непредсказуемо. Рейтинг стабилизирует институциональный анализ зарубежного опыта. Стратегическое планирование, безусловно, позиционирует побочный PR-эффект. Инвестиционный продукт, следовательно, последовательно переворачивает системный анализ.</div>
+    <div class="basket">
+        <div class="basket-row">
+            <div class="basket-photo"><a href="#"><img src="files/basket-1.jpg" alt="" /></a></div>
+            <div class="basket-text">
+                <div class="basket-title"><a href="#">Беспроводной сканер штрих-кода Datalogic PSC QS 2130</a></div>
+                <div class="basket-art">Артикул: 1532645</div>
+            </div>
+            <div class="basket-row-price">
+                15 500 &#8381;
+                <div class="basket-row-count-text">1 шт.</div>
+            </div>
+        </div>
+    </div>
     <form action="windows/success.html" method="post" class="window-form">
-        <div class="form-row">
-            <div class="form-label">Ваш email</div>
+        <div class="form-row fast-window-count">
+            <div class="form-label">количество</div>
             <div class="form-field">
-                <div class="form-input"><input type="text" name="email" value="" class="required email" /></div>
+                <div class="form-input"><input type="number" name="count" value="1" step="1" min="1" /></div>
+             </div>
+        </div>
+        <div class="form-row fast-window-phone">
+            <div class="form-label">Телефон</div>
+            <div class="form-field">
+                <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" /></div>
+             </div>
+        </div>
+        <div class="form-row fast-window-email">
+            <div class="form-label">email <span>/ опционально</span></div>
+            <div class="form-field">
+                <div class="form-input"><input type="text" name="email" value="" class="email" /></div>
             </div>
         </div>
         <div class="form-submit"><input type="submit" value="Оставить заявку" class="btn-submit" /></div>
