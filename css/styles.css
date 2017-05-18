@@ -956,6 +956,11 @@ header {padding:33px 0 32px 0; background:#fff}
 .product-link-compare.active > a span {display:none}
 .product-link-compare.active > a span+span {display:inline}
 .product-link-delivery {float:right; padding:0 0 0 27px; background:url(../images/product-link-delivery.png) no-repeat left center}
+.product-link-compare div {display:none; position:absolute; left:50%; top:100%; z-index:9; width:312px; height:56px; margin:4px 0 0 -156px; padding:12px 0 0 0; background:url(../images/catalogue-item-compare.png); text-align:center; font-size:15px; line-height:49px; font-weight:normal; letter-spacing:0; color:#81808b; text-transform:none}
+.product-link-compare.active:hover div {display:block}
+.product-link-compare div:before {content:""; display:block; position:absolute; left:0; top:-4px; right:0; height:4px; background:url(../images/blank.gif)}
+.product-link-compare div a {color:#098ed4; text-decoration:underline; text-transform:none; font-size:15px; font-weight:normal}
+.product-link-compare div a:hover {color:#0cb009}
 
 @media screen and (max-width:1199px) {
     .product-links {margin:40px 0 0 0}
