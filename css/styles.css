@@ -379,28 +379,80 @@ header {padding:33px 0 32px 0; background:#fff}
 .menu-add.open .menu-add-logo {display:block}
 .menu-add-link {display:block; width:20px; height:16px; background:url(../images/menu-add-link.png)}
 .menu-add.open .menu-add-link {background-position:left -16px; position:relative; z-index:991}
-.menu-add ul {display:none; position:absolute; left:-30px; top:29px; z-index:990; width:230px; padding:0 40px 0 30px; background:#0cb009; margin:0; text-transform:uppercase; font-weight:bold}
-.menu-add ul:before {content:""; display:block; position:absolute; left:0; top:-999px; right:0; height:99999px; background:#0cb009}
-.menu-add.open ul {display:block}
-.menu-add ul li {margin:0; padding:12px 0; border-top:1px solid #0b9e08; position:relative}
-.menu-add ul li:first-child {border-top:none}
-.menu-add ul li:before {display:none}
-.menu-add ul li a {color:#fff; text-decoration:none}
-.menu-add ul li a:hover {text-decoration:underline}
+.menu-add-main {display:none; position:absolute; left:-30px; top:29px; z-index:990; width:240px; padding:0 40px 0 30px; background:#0cb009; margin:0; text-transform:uppercase; font-weight:bold}
+.menu-add-main:before {content:""; display:block; position:absolute; left:0; top:-999px; right:0; height:99999px; background:#0cb009}
+.menu-add.open .menu-add-main {display:block}
+.menu-add-main li {margin:0; padding:0; border-top:1px solid #0b9e08; position:relative}
+.menu-add-main li:first-child {border-top:none}
+.menu-add-main li:before {display:none}
+.menu-add-main li a {display:block; color:#fff; text-decoration:none; margin:0 -40px 0 -30px; padding:12px 40px 12px 30px}
+.menu-add-main li a:hover {background:#0b9e08}
+.menu-add.open-sections .menu-add-main li.menu-add-main-link a {background:#0b9e08}
+.menu-add-main li.menu-add-main-link a {position:relative}
+.menu-add-main li.menu-add-main-link a:after {content:""; display:block; width:8px; height:13px; background:url(../images/menu-add-main-link.png); position:absolute; right:40px; top:50%; margin-top:-7px}
 
 @media screen and (max-width:1199px) {
     .menu-add {margin:0}
     .menu-add-link {display:block; position:absolute; left:0; top:37px; width:30px; height:24px; background:url(../images/menu-add-link-tablet.png)}
     .menu-add.open .menu-add-link {background-position:left -24px}
-    .menu-add ul {font-size:15px; left:-40px; padding:0 44px 0 44px; top:76px}
-    .menu-add ul li {padding:12px 0}
+    .menu-add-main {font-size:15px; left:-40px; padding:0 44px 0 44px; top:76px}
+    .menu-add-main li a {padding-right:44px; padding-left:44px; margin-left:-44px; margin-right:-44px}
+    .menu-add-main li.menu-add-main-link a:after {right:44px}
 }
 
 @media screen and (max-width:767px) {
     .menu-add-link {top:26px; background:url(../images/menu-add-link-mobile.png)}
     .menu-add.open .menu-add-link {background-position:left -24px}
-    .menu-add ul {font-size:20px; left:-25px; padding:0 50px 0 30px}
-    .menu-add ul li {padding:23px 0 26px 0}
+    .menu-add-main {font-size:20px; left:-25px; padding:0 50px 0 30px}
+    .menu-add-main li a {padding:23px 50px 26px 30px; margin-right:-50px; margin-left:-30px}
+    .menu-add-main li.menu-add-main-link a:after {right:50px}
+}
+
+.menu-add-sections {opacity:0; visibility:hidden; z-index:990; position:absolute; left:215px; top:-142px; height:99999px; background:#fff; width:298px; box-shadow:0 15px 30px rgba(185, 185, 185, .52); transition:left .4s, opacity .4s, visibility .4s}
+.menu-add.open.open-sections .menu-add-sections {opacity:1; visibility:visible; left:280px}
+.menu-add-sections > ul {margin:0; font-size:13px; line-height:25px; text-transform:uppercase; font-weight:bold; padding:21px 0 0 0}
+.menu-add-sections > ul > li {margin:0; padding:0; border-bottom:1px solid #f6f6f6; position:static}
+.menu-add-sections > ul > li:before {display:none}
+.menu-add-sections > ul > li > a {display:block; padding:11px 80px 13px 40px; text-decoration:none; color:#81808b; position:relative}
+.menu-add-sections > ul > li > a:after {content:""; display:block; width:8px; height:13px; background:url(../images/menu-add-sections.png); position:absolute; right:40px; top:50%; margin-top:-7px}
+.menu-add-sections > ul > li > a:hover,
+.menu-add-sections > ul > li.open > a {background:#f6f6f6}
+
+.menu-add-section {opacity:0; visibility:hidden; z-index:990; position:absolute; left:23px; top:0; bottom:0; background:#f7f7f7; width:390px; box-shadow:0 7px 50px rgba(0, 0, 0, .33); transition:left .4s, opacity .4s, visibility .4s}
+.menu-add-sections > ul > li.open .menu-add-section {opacity:1; visibility:visible; left:88px}
+.menu-add-section-close {display:block; position:absolute; left:30px; top:32px; width:19px; height:14px; background:url(../images/menu-add-section-close.png)}
+.menu-add-sections .main-sections-item {float:none; text-transform:none; font-weight:normal; width:390px}
+.menu-add-sections .main-sections-item:hover {position:static; z-index:auto}
+@media screen and (min-width:1200px) {
+    .menu-add-sections .main-sections-item:hover .main-sections-item-bg {transform:none; box-shadow:none}
+}
+.menu-add-sections .main-sections-item-04 .main-sections-item-img {right:0; top:auto; bottom:0; line-height:0; height:auto; width:300px}
+.menu-add-sections .main-sections-item-04 .main-sections-item-img img {width:100%}
+.menu-add-catalogue {margin:20px 11px 0 0; overflow:auto}
+.menu-add-catalogue-inner {width:340px; padding:0 0 20px 20px}
+.menu-add-catalogue-inner .catalogue-item {width:100%; padding:10px 0 0 0}
+.menu-add-catalogue-inner .catalogue-item:first-child {padding:0}
+.menu-add-catalogue-inner .catalogue-item:nth-child(2),
+.menu-add-catalogue-inner .catalogue-item:nth-child(3) {padding:10px 0 0 0}
+.menu-add-catalogue-inner .catalogue-item-inner {padding:0 0 10px 0}
+.menu-add-catalogue-inner .catalogue-item-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.menu-add-catalogue-inner .catalogue-item-photo {float:left; width:115px; height:115px; line-height:115px; padding:10px; min-height:0}
+.menu-add-catalogue-inner .catalogue-item-name {margin:0 20px 0 140px; font-size:14px; text-align:left; padding:15px 0 0 0}
+.menu-add-catalogue-inner .catalogue-item-ctrl {margin:0 20px 0 140px; border-top:none; padding:0}
+.menu-add-catalogue-inner .catalogue-item-price {margin-top:14px}
+.menu-add-catalogue-inner .catalogue-item-cart {margin-top:13px; margin-right:0}
+.menu-add-catalogue-inner .catalogue-item-price-old {margin-top:15px}
+.menu-add-catalogue .jspTrack {background:#d9d9d9}
+.menu-add-catalogue .jspDrag {background:#0cb009}
+
+@media screen and (max-width:1199px) {
+    .menu-add-sections {left:223px; top:0}
+    .menu-add.open.open-sections .menu-add-sections {left:288px}
+}
+
+@media screen and (max-width:767px) {
+    .menu-add-sections {left:230px; top:0}
+    .menu-add.open.open-sections .menu-add-sections {left:295px}
 }
 
 .menu {float:right; font-weight:bold; text-transform:uppercase; line-height:50px; letter-spacing:1px}
@@ -709,10 +761,12 @@ header {padding:33px 0 32px 0; background:#fff}
 .catalogue-item-compare div:before {content:""; display:block; position:absolute; left:0; top:-11px; right:0; height:11px; background:url(../images/blank.gif)}
 .catalogue-item-compare div a {color:#098ed4; text-decoration:underline}
 .catalogue-item-compare div a:hover {color:#0cb009}
-.catalogue-item-event {position:absolute; left:0; top:30px; padding:0 15px; font-size:12px; line-height:30px; letter-spacing:1px; text-transform:uppercase; color:#fff}
-.catalogue-item-event-hit {background:#f63939}
-.catalogue-item-event-discount {background:#0cb009}
-.catalogue-item-event-new {background:#ffb400}
+.catalogue-item-event {position:absolute; left:10px; top:10px; font-size:11px; line-height:39px; width:39px; height:39px; border-radius:50%; text-align:center; letter-spacing:1px; text-transform:uppercase; color:#fff}
+.catalogue-item-event+.catalogue-item-event {margin-top:34px}
+.catalogue-item-event+.catalogue-item-event+.catalogue-item-event {margin-top:68px}
+.catalogue-item-event-hit {background:#ffb400}
+.catalogue-item-event-discount {background:#f63939; font-size:16px}
+.catalogue-item-event-new {background:#0cb009}
 
 @media screen and (max-width:1199px) {
     .catalogue-item {width:50%}
@@ -893,7 +947,7 @@ header {padding:33px 0 32px 0; background:#fff}
 }
 
 .product-right h1 {font-size:33px; line-height:38px; text-transform:none; margin-top:18px}
-.product-right .catalogue-item-event {left:auto; right:100%; margin-right:-16px; z-index:2; top:51px; padding:0 20px; line-height:33px}
+.product-right .catalogue-item-event {left:auto; right:100%; margin-right:-16px; z-index:2; top:51px}
 
 @media screen and (max-width:1199px) {
     .product-right h1 {font-size:25px; line-height:30px}
