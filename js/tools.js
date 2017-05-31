@@ -466,6 +466,7 @@ $(document).ready(function() {
 
     $('.basket-order-link-mobile a').click(function(e) {
         $('.checkout').addClass('step-2');
+        $('html, body').animate({scrollTop: $('.checkout').offset().top});
         e.preventDefault();
     });
 
