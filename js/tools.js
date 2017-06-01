@@ -520,8 +520,10 @@ $(document).ready(function() {
 });
 
 $(window).on('load resize', function() {
-    var curHeight = $(window).height() - 290;
-    $('.menu-add-catalogue').css({'max-height': curHeight + 'px'});
+    $('.menu-add-section').each(function() {
+        var curHeight = $(window).height() - ($(this).find('.main-sections-item').height() + 40);
+        $(this).find('.menu-add-catalogue').css({'max-height': curHeight + 'px', 'top': $(this).find('.main-sections-item').height() + 25});
+    });
 });
 
 function recalcCart() {
