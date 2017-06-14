@@ -15,8 +15,16 @@ $(document).ready(function() {
     });
 
     $('.menu-add-link').click(function(e) {
+        var curPadding = $('.wrapper').width();
         $('.menu-add').toggleClass('open');
         $('html').toggleClass('open-menu-add');
+        if ($('.menu-add').hasClass('open')) {
+            curPadding = $('.wrapper').width() - curPadding;
+            $('body').css({'padding-right': curPadding});
+        } else {
+            $('body').css({'padding-right': 0});
+        }
+
         $('.menu-add').removeClass('open-sections');
         $('.menu-add-sections > ul > li.open').removeClass('open');
         e.preventDefault();
@@ -28,6 +36,7 @@ $(document).ready(function() {
             $('html').removeClass('open-menu-add');
             $('.menu-add').removeClass('open-sections');
             $('.menu-add-sections > ul > li.open').removeClass('open');
+            $('body').css({'padding-right': 0});
         }
     });
 
@@ -487,21 +496,69 @@ $(document).ready(function() {
     });
 
     $('.menu-add-main li.menu-add-main-link a').click(function(e) {
-        $('.menu-add').toggleClass('open-sections');
-        $('.menu-add-sections > ul > li.open').removeClass('open');
-        e.preventDefault();
+        if ($(window).width() < 1200) {
+            $('.menu-add').toggleClass('open-sections');
+            $('.menu-add-sections > ul > li.open').removeClass('open');
+            e.preventDefault();
+        }
     });
 
+    if ($(window).width() >= 1200) {
+        var timerSections = null;
+
+        $('.menu-add-main li.menu-add-main-link a').mouseover(function(e) {
+            window.clearTimeout(timerSections);
+            timerSections = null;
+            $('.menu-add').addClass('open-sections');
+        });
+
+        $('.menu-add-main li.menu-add-main-link a').mouseout(function(e) {
+            window.clearTimeout(timerSections);
+            timerSections = null;
+            timerSections = window.setTimeout(function() {
+                $('.menu-add').removeClass('open-sections');
+            }, 500);
+        });
+
+        $('.menu-add-sections').mouseover(function(e) {
+            window.clearTimeout(timerSections);
+            timerSections = null;
+        });
+
+        $('.menu-add-sections').mouseout(function(e) {
+            window.clearTimeout(timerSections);
+            timerSections = null;
+            timerSections = window.setTimeout(function() {
+                $('.menu-add').removeClass('open-sections');
+            }, 500);
+        });
+    }
+
     $('.menu-add-sections > ul > li > a').click(function(e) {
-        var curLi = $(this).parent();
-        if (curLi.hasClass('open')) {
-            curLi.removeClass('open');
-        } else {
+        if ($(window).width() < 1200) {
+            var curLi = $(this).parent();
+            if (curLi.hasClass('open')) {
+                curLi.removeClass('open');
+            } else {
+                $('.menu-add-sections > ul > li.open').removeClass('open');
+                curLi.addClass('open');
+            }
+            e.preventDefault();
+        }
+    });
+
+    if ($(window).width() >= 1200) {
+        $('.menu-add-sections > ul > li').mouseover(function(e) {
+            var curLi = $(this);
             $('.menu-add-sections > ul > li.open').removeClass('open');
             curLi.addClass('open');
-        }
-        e.preventDefault();
-    });
+        });
+
+        $('.menu-add-sections > ul > li').mouseout(function(e) {
+            var curLi = $(this);
+            curLi.removeClass('open');
+        });
+    }
 
     $('.menu-add-section-close').click(function(e) {
         $('.menu-add-sections > ul > li.open').removeClass('open');
@@ -679,13 +736,17 @@ function checkErrors() {
 }
 
 function windowOpen(linkWindow, dataWindow) {
+    $('html').removeClass('window-closed')
+    var curPadding = $('.wrapper').width();
     $('html').addClass('window-open');
+    curPadding = $('.wrapper').width() - curPadding;
+    $('body').css({'padding-right': curPadding});
 
     if ($('.window').length > 0) {
         $('.window').remove();
     }
 
-    $('.wrapper').append('<div class="window"><div class="window-loading"></div></div>')
+    $('body').append('<div class="window"><div class="window-loading"></div></div>')
 
     $.ajax({
         type: 'POST',
@@ -758,7 +819,8 @@ function windowPosition() {
 function windowClose() {
     if ($('.window').length > 0) {
         $('.window').remove();
-        $('html').removeClass('window-open');
+        $('html').removeClass('window-open').addClass('window-closed');
+        $('body').css({'padding-right': 0});
     }
 }
 

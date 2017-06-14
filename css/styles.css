@@ -390,6 +390,7 @@ header {padding:33px 0 32px 0; background:#fff}
 .menu-add.open-sections .menu-add-main li.menu-add-main-link a {background:#0b9e08}
 .menu-add-main li.menu-add-main-link a {position:relative}
 .menu-add-main li.menu-add-main-link a:after {content:""; display:block; width:8px; height:13px; background:url(../images/menu-add-main-link.png); position:absolute; right:40px; top:50%; margin-top:-7px}
+.open-menu-add body {overflow:hidden}
 
 @media screen and (max-width:1199px) {
     .menu-add {margin:0}
@@ -401,7 +402,6 @@ header {padding:33px 0 32px 0; background:#fff}
 }
 
 @media screen and (max-width:767px) {
-    .open-menu-add body {overflow:hidden}
     .menu-add-link {top:26px; background:url(../images/menu-add-link-mobile.png)}
     .menu-add.open .menu-add-link {background-position:left -24px}
     .menu-add-main {font-size:20px; left:0; padding:76px 50px 0 30px; position:fixed; right:0; bottom:0; top:0; width:auto; overflow:auto}
@@ -411,6 +411,9 @@ header {padding:33px 0 32px 0; background:#fff}
 }
 
 .menu-add-sections {opacity:0; visibility:hidden; z-index:990; position:absolute; left:215px; top:-142px; height:99999px; background:#fff; width:298px; box-shadow:0 15px 30px rgba(185, 185, 185, .52); transition:left .4s, opacity .4s, visibility .4s}
+@media screen and (min-width:1200px) {
+    .menu-add-sections {transition:none}
+}
 .menu-add.open.open-sections .menu-add-sections {opacity:1; visibility:visible; left:280px}
 .menu-add-sections > ul {margin:0; font-size:13px; line-height:25px; text-transform:uppercase; font-weight:bold; padding:21px 0 0 0}
 .menu-add-sections > ul > li {margin:0; padding:0; border-bottom:1px solid #f6f6f6; position:static}
@@ -420,9 +423,15 @@ header {padding:33px 0 32px 0; background:#fff}
 .menu-add-sections > ul > li > a:hover,
 .menu-add-sections > ul > li.open > a {background:#f6f6f6}
 
-.menu-add-section {opacity:0; visibility:hidden; z-index:990; position:absolute; left:23px; top:0; bottom:0; background:#f7f7f7; width:390px; box-shadow:0 7px 50px rgba(0, 0, 0, .33); transition:left .4s, opacity .4s, visibility .4s}
-.menu-add-sections > ul > li.open .menu-add-section {opacity:1; visibility:visible; left:88px}
+.menu-add-section {opacity:0; visibility:hidden; z-index:990; position:absolute; left:223px; top:0; bottom:0; background:#f7f7f7; width:390px; box-shadow:0 7px 50px rgba(0, 0, 0, .33); transition:left .4s, opacity .4s, visibility .4s}
+@media screen and (min-width:1200px) {
+    .menu-add-section {transition:none}
+}
+.menu-add-sections > ul > li.open .menu-add-section {opacity:1; visibility:visible; left:288px}
 .menu-add-section-close {display:block; position:absolute; left:30px; top:32px; width:19px; height:14px; background:url(../images/menu-add-section-close.png)}
+@media screen and (min-width:1200px) {
+    .menu-add-section-close {display:none}
+}
 .menu-add-sections .main-sections-item {float:none; text-transform:none; font-weight:normal; width:390px; margin-top:0; margin-right:0}
 .menu-add-sections .main-sections-item .main-sections-item-inner {height:150px; padding-top:50px; padding-bottom:50px}
 .menu-add-sections .main-sections-item:hover {position:static; z-index:auto}
@@ -975,7 +984,7 @@ header {padding:33px 0 32px 0; background:#fff}
 }
 
 .product-right h1 {font-size:33px; line-height:38px; text-transform:none; margin-top:18px}
-.product-right .catalogue-item-event {left:auto; right:100%; margin-right:-16px; z-index:2; top:51px}
+.product-right .catalogue-item-event {left:auto; right:100%; margin-right:-16px; z-index:2; top:51px; border-radius:0; width:100px}
 
 @media screen and (max-width:1199px) {
     .product-right h1 {font-size:25px; line-height:30px}
@@ -1171,9 +1180,9 @@ header {padding:33px 0 32px 0; background:#fff}
 .slider-item-inner {background:#fff; margin:0 15px; height:525px; position:relative; overflow:hidden; padding:0 570px 0 100px}
 .slider-item-img {position:absolute; right:0; top:0; line-height:0}
 .slider-item-img img:nth-child(2) {display:none}
-.slider-item-title {color:#098ed4; font-weight:bold; font-size:46px; line-height:50px; letter-spacing:0; padding:58px 0 0 0}
-.slider-item-text {font-size:20px; line-height:25px; letter-spacing:0; font-weight:300; padding:39px 0 0 0}
-.slider-item-list {font-size:15px; line-height:25px; letter-spacing:0; padding:27px 0 0 0}
+.slider-item-title {color:#098ed4; font-weight:bold; font-size:46px; line-height:50px; letter-spacing:0; padding:58px 0 0 0; position:relative; z-index:1}
+.slider-item-text {font-size:20px; line-height:25px; letter-spacing:0; font-weight:300; padding:39px 0 0 0; position:relative; z-index:1}
+.slider-item-list {font-size:15px; line-height:25px; letter-spacing:0; padding:27px 0 0 0; position:relative; z-index:1}
 .slider-item-list ul {margin:0}
 .slider-item-list li {margin:0; padding:0}
 .slider-item-list li:before {display:none}
@@ -1468,6 +1477,8 @@ h1+.search-ctrl {margin:30px 0 13px 0}
     .checkout {position:relative; margin:0 -30px}
 }
 
+.checkout form {margin:0; padding:0}
+
 .checkout-steps {display:none}
 @media screen and (max-width:767px) {
     .checkout-steps {display:block; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; padding:0 0 24px 0; margin:-12px 0 0 0}
@@ -1484,7 +1495,7 @@ h1+.search-ctrl {margin:30px 0 13px 0}
 }
 
 .checkout-cart {float:right; width:50%; padding:0 0 0 15px; box-sizing:border-box}
-.checkout-cart form {margin:0; padding:2px 0 0 0; background:none}
+.checkout-cart-form {margin:0; padding:2px 0 0 0; background:none}
 .basket-row {display:table; border-top:1px solid #ebebeb; width:100%; background:#fff}
 .basket-row:first-child {border-top:none}
 .basket-photo {display:table-cell; vertical-align:middle; padding:10px 0; width:130px; line-height:0; text-align:center}
@@ -1514,7 +1525,7 @@ h1+.search-ctrl {margin:30px 0 13px 0}
 
 @media screen and (max-width:767px) {
     .checkout.step-2 .checkout-cart {position:absolute; left:-9999px; top:-9999px}
-    .checkout-cart form {margin:0}
+    .checkout-cart-form {margin:0}
     .checkout-cart .basket-row {display:block; position:relative; padding:0 30px 0 0; width:auto}
     .checkout-cart .basket-photo {display:block; float:left; width:130px; padding:28px 0 0 0}
     .checkout-cart .basket-text {display:block; margin:0 0 0 130px; padding-top:23px 30px 0 0}
@@ -1534,12 +1545,12 @@ h1+.search-ctrl {margin:30px 0 13px 0}
 
 @media screen and (max-width:767px) {
     .checkout-order {position:absolute; left:-9999px; top:-9999px; float:none; width:100%; padding:0; margin:0}
-    .checkout-order form {margin:0; padding:0}
+    .checkout-order-form {margin:0; padding:0}
     .checkout.step-2 .checkout-order {position:relative; left:auto; top:auto}
 }
 
 .checkout-form {padding:11px 30px 38px 30px; background:#fff; margin:29px 0 0 0}
-.checkout-form form {margin:0; padding:0; background:none}
+.checkout-form-form {margin:0; padding:0; background:none}
 .checkout-form .form-row {margin:12px 0}
 .checkout-form-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .checkout-form-row .form-row:nth-child(1) {float:left; width:270px}
@@ -1779,8 +1790,45 @@ footer {background:#fff; height:400px; margin:-400px 0 0 0; position:relative; m
 }
 
 .window-open body {overflow:hidden}
+.window-open .wrapper {-webkit-animation:blur .5s forwards; -moz-animation:blur .5s forwards; -o-animation:blur .5s forwards; animation:blur .5s forwards}
+.window-open footer {-webkit-animation:blur .5s forwards; -moz-animation:blur .5s forwards; -o-animation:blur .5s forwards; animation:blur .5s forwards}
+@-webkit-keyframes blur {
+    0% {-webkit-filter:blur(0px); -moz-filter:blur(0px); -o-filter:blur(0px); -ms-filter:blur(0px); filter:blur(0px)}
+    100% {-webkit-filter:blur(8px); -moz-filter:blur(8px); -o-filter:blur(8px); -ms-filter:blur(8px); filter:blur(8px)}
+}
+@-moz-keyframes blur {
+    0% {-webkit-filter:blur(0px); -moz-filter:blur(0px); -o-filter:blur(0px); -ms-filter:blur(0px); filter:blur(0px)}
+    100% {-webkit-filter:blur(8px); -moz-filter:blur(8px); -o-filter:blur(8px); -ms-filter:blur(8px); filter:blur(8px)}
+}
+@-o-keyframes blur {
+    0% {-webkit-filter:blur(0px); -moz-filter:blur(0px); -o-filter:blur(0px); -ms-filter:blur(0px); filter:blur(0px)}
+    100% {-webkit-filter:blur(8px); -moz-filter:blur(8px); -o-filter:blur(8px); -ms-filter:blur(8px); filter:blur(8px)}
+}
+@keyframes blur {
+    0% {-webkit-filter:blur(0px); -moz-filter:blur(0px); -o-filter:blur(0px); -ms-filter:blur(0px); filter:blur(0px)}
+    100% {-webkit-filter:blur(8px);-moz-filter:blur(8px); -o-filter:blur(8px); -ms-filter:blur(8px); filter:blur(8px)}
+}
 
-.window {position:fixed; left:0; top:0; right:0; bottom:0; z-index:99997; overflow:auto; background:rgba(246, 246, 246, .95)}
+.window-closed .wrapper {-webkit-animation:blur-out .5s forwards; -moz-animation:blur-out .5s forwards; -o-animation:blur-out .5s forwards; animation:blur-out .5s forwards}
+.window-closed footer {-webkit-animation:blur-out .5s forwards; -moz-animation:blur-out .5s forwards; -o-animation:blur-out .5s forwards; animation:blur-out .5s forwards}
+@-webkit-keyframes blur-out {
+    0% {-webkit-filter:blur(8px); -moz-filter:blur(8px); -o-filter:blur(8px); -ms-filter:blur(8px); filter:blur(8px)}
+    100% {-webkit-filter:blur(0px); -moz-filter:blur(0px); -o-filter:blur(0px); -ms-filter:blur(0px); filter:blur(0px)}
+}
+@-moz-keyframes blur-out {
+    0% {-webkit-filter:blur(8px); -moz-filter:blur(8px); -o-filter:blur(8px); -ms-filter:blur(8px); filter:blur(8px)}
+    100% {-webkit-filter:blur(0px); -moz-filter:blur(0px); -o-filter:blur(0px); -ms-filter:blur(0px); filter:blur(0px)}
+}
+@-o-keyframes blur-out {
+    0% {-webkit-filter:blur(8px); -moz-filter:blur(8px); -o-filter:blur(8px); -ms-filter:blur(8px); filter:blur(8px)}
+    100% {-webkit-filter:blur(0px); -moz-filter:blur(0px); -o-filter:blur(0px); -ms-filter:blur(0px); filter:blur(0px)}
+}
+@keyframes blur-out {
+    0% {-webkit-filter:blur(8px);-moz-filter:blur(8px); -o-filter:blur(8px); -ms-filter:blur(8px); filter:blur(8px)}
+    100% {-webkit-filter:blur(0px); -moz-filter:blur(0px); -o-filter:blur(0px); -ms-filter:blur(0px); filter:blur(0px)}
+}
+
+.window {position:fixed; left:0; top:0; right:0; bottom:0; z-index:99997; overflow:auto; background:rgba(246, 246, 246, .25)}
 .window-loading {position:absolute; left:50%; top:50%; width:24px; height:24px; margin:-12px 0 0 -12px; background:url(../images/loading.gif)}
 .window-container {position:absolute; z-index:99999; left:50%; top:50%}
 .window-container-load {position:fixed; left:-9999px; top:-9999px}

@@ -635,173 +635,176 @@
                             <!-- checkout -->
                             <div class="checkout">
 
-                                <!-- checkout cart -->
-                                <div class="checkout-cart">
-                                    <h1>Подробности заказа</h1>
+                                <form action="#" method="post">
 
-                                    <div class="checkout-steps">
-                                        <a href="#" class="checkout-step checkout-step-1">
-                                            <div class="checkout-step-number">1</div>
-                                            <div class="checkout-step-title">Корзина</div>
-                                        </a>
-                                        <div class="checkout-steps-sep"></div>
-                                        <a href="#" class="checkout-step checkout-step-2">
-                                            <div class="checkout-step-number">2</div>
-                                            <div class="checkout-step-title">Заказ</div>
-                                        </a>
+                                    <!-- checkout cart -->
+                                    <div class="checkout-cart">
+                                        <h1>Подробности заказа</h1>
+
+                                        <div class="checkout-steps">
+                                            <a href="#" class="checkout-step checkout-step-1">
+                                                <div class="checkout-step-number">1</div>
+                                                <div class="checkout-step-title">Корзина</div>
+                                            </a>
+                                            <div class="checkout-steps-sep"></div>
+                                            <a href="#" class="checkout-step checkout-step-2">
+                                                <div class="checkout-step-number">2</div>
+                                                <div class="checkout-step-title">Заказ</div>
+                                            </a>
+                                        </div>
+
+                                        <div class="checkout-cart-form">
+                                            <!-- basket row -->
+                                            <div class="basket-row">
+                                                <div class="basket-photo"><a href="#"><img src="files/basket-1.jpg" alt="" /></a></div>
+                                                <div class="basket-text">
+                                                    <div class="basket-title"><a href="#">Беспроводной сканер штрих-кода Datalogic PSC QS 2130</a></div>
+                                                    <div class="basket-art">Артикул: 1532645</div>
+                                                </div>
+                                                <div class="basket-row-count">
+                                                    <div class="form-input"><input type="number" name="count[]" value="1" step="1" min="1" /></div>
+                                                </div>
+                                                <div class="basket-row-price"><span>15 500</span> &#8381;</div>
+                                                <div class="basket-delete"><a href="#"></a></div>
+                                            </div>
+                                            <!-- basket row END -->
+
+                                            <!-- basket row -->
+                                            <div class="basket-row">
+                                                <div class="basket-photo"><a href="#"><img src="files/basket-2.jpg" alt="" /></a></div>
+                                                <div class="basket-text">
+                                                    <div class="basket-title"><a href="#">Ручной 2D сканер штрих-кода Symbol  Motorola</a></div>
+                                                    <div class="basket-art">Артикул: 1532645</div>
+                                                </div>
+                                                <div class="basket-row-count">
+                                                    <div class="form-input"><input type="number" name="count[]" value="1" step="1" min="1" /></div>
+                                                </div>
+                                                <div class="basket-row-price"><span>27 100</span> &#8381; <em>31 000 ₽</em></div>
+                                                <div class="basket-delete"><a href="#"></a></div>
+                                            </div>
+                                            <!-- basket row END -->
+
+                                            <!-- basket results -->
+                                            <div class="basket-results">
+                                                <div class="basket-info">
+                                                    <div class="basket-info-row">
+                                                        <div class="basket-info-title">Стоимость товаров</div>
+                                                        <div class="basket-info-value"><span id="basket-price">42 600</span> &#8381;</div>
+                                                    </div>
+                                                    <div class="basket-info-row">
+                                                        <div class="basket-info-title">Доставка</div>
+                                                        <div class="basket-info-value"><span id="basket-delivery">500</span> &#8381;</div>
+                                                    </div>
+                                                    <div class="basket-info-row">
+                                                        <div class="basket-info-title">Скидка</div>
+                                                        <div class="basket-info-value"><span id="basket-discount">-2 020</span> &#8381;</div>
+                                                    </div>
+                                                    <div class="basket-info-row">
+                                                        <div class="basket-info-title">Скидка по купону</div>
+                                                        <div class="basket-info-value"><span id="basket-coupon-summ">-2 876</span> &#8381;</div>
+                                                        <div class="basket-info-discount"><span id="basket-coupon-value">7</span>%</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="basket-summ">
+                                                    <div class="basket-summ-title">Итого</div>
+                                                    <div class="basket-summ-value"><span id="basket-summ">38 204</span> &#8381;</div>
+                                                </div>
+
+                                                <div class="basket-order-link-mobile"><a href="#" class="btn-submit">Оформить заказ</a></div>
+                                            </div>
+                                            <!-- basket results END -->
+
+                                        </div>
+
                                     </div>
+                                    <!-- checkout cart END -->
 
-                                    <form action="#" method="post">
+                                    <!-- checkout order -->
+                                    <div class="checkout-order">
+                                        <h1>Оформление заказа</h1>
 
-                                        <!-- basket row -->
-                                        <div class="basket-row">
-                                            <div class="basket-photo"><a href="#"><img src="files/basket-1.jpg" alt="" /></a></div>
-                                            <div class="basket-text">
-                                                <div class="basket-title"><a href="#">Беспроводной сканер штрих-кода Datalogic PSC QS 2130</a></div>
-                                                <div class="basket-art">Артикул: 1532645</div>
-                                            </div>
-                                            <div class="basket-row-count">
-                                                <div class="form-input"><input type="number" name="count[]" value="1" step="1" min="1" /></div>
-                                            </div>
-                                            <div class="basket-row-price"><span>15 500</span> &#8381;</div>
-                                            <div class="basket-delete"><a href="#"></a></div>
+                                        <div class="checkout-steps">
+                                            <a href="#" class="checkout-step checkout-step-1">
+                                                <div class="checkout-step-number">1</div>
+                                                <div class="checkout-step-title">Корзина</div>
+                                            </a>
+                                            <div class="checkout-steps-sep"></div>
+                                            <a href="#" class="checkout-step checkout-step-2">
+                                                <div class="checkout-step-number">2</div>
+                                                <div class="checkout-step-title">Заказ</div>
+                                            </a>
                                         </div>
-                                        <!-- basket row END -->
 
-                                        <!-- basket row -->
-                                        <div class="basket-row">
-                                            <div class="basket-photo"><a href="#"><img src="files/basket-2.jpg" alt="" /></a></div>
-                                            <div class="basket-text">
-                                                <div class="basket-title"><a href="#">Ручной 2D сканер штрих-кода Symbol  Motorola</a></div>
-                                                <div class="basket-art">Артикул: 1532645</div>
-                                            </div>
-                                            <div class="basket-row-count">
-                                                <div class="form-input"><input type="number" name="count[]" value="1" step="1" min="1" /></div>
-                                            </div>
-                                            <div class="basket-row-price"><span>27 100</span> &#8381; <em>31 000 ₽</em></div>
-                                            <div class="basket-delete"><a href="#"></a></div>
-                                        </div>
-                                        <!-- basket row END -->
-
-                                        <!-- basket results -->
-                                        <div class="basket-results">
-                                            <div class="basket-info">
-                                                <div class="basket-info-row">
-                                                    <div class="basket-info-title">Стоимость товаров</div>
-                                                    <div class="basket-info-value"><span id="basket-price">42 600</span> &#8381;</div>
-                                                </div>
-                                                <div class="basket-info-row">
-                                                    <div class="basket-info-title">Доставка</div>
-                                                    <div class="basket-info-value"><span id="basket-delivery">500</span> &#8381;</div>
-                                                </div>
-                                                <div class="basket-info-row">
-                                                    <div class="basket-info-title">Скидка</div>
-                                                    <div class="basket-info-value"><span id="basket-discount">-2 020</span> &#8381;</div>
-                                                </div>
-                                                <div class="basket-info-row">
-                                                    <div class="basket-info-title">Скидка по купону</div>
-                                                    <div class="basket-info-value"><span id="basket-coupon-summ">-2 876</span> &#8381;</div>
-                                                    <div class="basket-info-discount"><span id="basket-coupon-value">7</span>%</div>
-                                                </div>
-                                            </div>
-
-                                            <div class="basket-summ">
-                                                <div class="basket-summ-title">Итого</div>
-                                                <div class="basket-summ-value"><span id="basket-summ">38 204</span> &#8381;</div>
-                                            </div>
-
-                                            <div class="basket-order-link-mobile"><a href="#" class="btn-submit">Оформить заказ</a></div>
-                                        </div>
-                                        <!-- basket results END -->
-
-                                    </form>
-
-                                </div>
-                                <!-- checkout cart END -->
-
-                                <!-- checkout order -->
-                                <div class="checkout-order">
-                                    <h1>Оформление заказа</h1>
-
-                                    <div class="checkout-steps">
-                                        <a href="#" class="checkout-step checkout-step-1">
-                                            <div class="checkout-step-number">1</div>
-                                            <div class="checkout-step-title">Корзина</div>
-                                        </a>
-                                        <div class="checkout-steps-sep"></div>
-                                        <a href="#" class="checkout-step checkout-step-2">
-                                            <div class="checkout-step-number">2</div>
-                                            <div class="checkout-step-title">Заказ</div>
-                                        </a>
-                                    </div>
-
-                                    <!-- checkout form -->
-                                    <div class="checkout-form">
-                                        <form action="#" method="post">
-                                            <div class="form-row">
-                                                <div class="form-label">Ваше ФИО</div>
-                                                <div class="form-field">
-                                                    <div class="form-input"><input type="text" name="name" value="" class="required" /></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="checkout-form-row">
+                                        <!-- checkout form -->
+                                        <div class="checkout-form">
+                                            <div class="checkout-form-form">
                                                 <div class="form-row">
-                                                    <div class="form-label">E-mail</div>
+                                                    <div class="form-label">Ваше ФИО</div>
                                                     <div class="form-field">
-                                                        <div class="form-input"><input type="text" name="email" value="" class="required email" /></div>
+                                                        <div class="form-input"><input type="text" name="name" value="" class="required" /></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="checkout-form-row">
+                                                    <div class="form-row">
+                                                        <div class="form-label">E-mail</div>
+                                                        <div class="form-field">
+                                                            <div class="form-input"><input type="text" name="email" value="" class="required email" /></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-row">
+                                                        <div class="form-label">Телефон</div>
+                                                        <div class="form-field">
+                                                            <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" /></div>
+                                                        </div>
                                                     </div>
                                                 </div>
 
                                                 <div class="form-row">
-                                                    <div class="form-label">Телефон</div>
+                                                    <div class="form-label">Адрес и способ доставки</div>
                                                     <div class="form-field">
-                                                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" /></div>
+                                                        <div class="form-select">
+                                                            <select name="delivery" data-placeholder="Выберите значение" id="changeDelivery">
+                                                                <option value=""></option>
+                                                                <option value="1">Самовывоз из магазина</option>
+                                                                <option value="2" selected="selected">Доставка по Москве</option>
+                                                                <option value="3">Доставка почтой в Регионы</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="order-delivery">
+                                                            <div class="order-delivery-item" id="delivery-1">Стоимость: бесплатно</div>
+                                                            <div class="order-delivery-item active" id="delivery-2">Сроки доставки: 1-2 дня<br />Стоимость: <span class="delivery-price">500</span> &#8381;<br />Бесплатно от: <span class="delivery-free">50 000</span> &#8381;</div>
+                                                            <div class="order-delivery-item" id="delivery-3">Сроки доставки: 3-4 дня<br />Стоимость: <span class="delivery-price">1000</span> &#8381;<br />Бесплатно от: <span class="delivery-free">50 000</span> &#8381;</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row order-comment-link">
+                                                    <a href="#">Добавить комментарий к заказу</a>
+                                                </div>
+
+                                                <div class="form-row order-comment">
+                                                    <div class="form-label">Комментарий к&nbsp;заказу <span>/ опционально</span></div>
+                                                    <div class="form-field">
+                                                        <div class="form-input"><textarea name="comment" rows="5" cols="10"></textarea></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="form-field">
+                                                        <div class="form-submit"><input type="submit" value="Подтвердить заказ" class="btn-submit" /></div>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="form-row">
-                                                <div class="form-label">Адрес и способ доставки</div>
-                                                <div class="form-field">
-                                                    <div class="form-select">
-                                                        <select name="delivery" data-placeholder="Выберите значение" id="changeDelivery">
-                                                            <option value=""></option>
-                                                            <option value="1">Самовывоз из магазина</option>
-                                                            <option value="2" selected="selected">Доставка по Москве</option>
-                                                            <option value="3">Доставка почтой в Регионы</option>
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="order-delivery">
-                                                        <div class="order-delivery-item" id="delivery-1">Стоимость: бесплатно</div>
-                                                        <div class="order-delivery-item active" id="delivery-2">Сроки доставки: 1-2 дня<br />Стоимость: <span class="delivery-price">500</span> &#8381;<br />Бесплатно от: <span class="delivery-free">50 000</span> &#8381;</div>
-                                                        <div class="order-delivery-item" id="delivery-3">Сроки доставки: 3-4 дня<br />Стоимость: <span class="delivery-price">1000</span> &#8381;<br />Бесплатно от: <span class="delivery-free">50 000</span> &#8381;</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-row order-comment-link">
-                                                <a href="#">Добавить комментарий к заказу</a>
-                                            </div>
-
-                                            <div class="form-row order-comment">
-                                                <div class="form-label">Комментарий к&nbsp;заказу <span>/ опционально</span></div>
-                                                <div class="form-field">
-                                                    <div class="form-input"><textarea name="comment" rows="5" cols="10"></textarea></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-row">
-                                                <div class="form-field">
-                                                    <div class="form-submit"><input type="submit" value="Подтвердить заказ" class="btn-submit" /></div>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        </div>
+                                        <!-- checkout form END -->
                                     </div>
-                                    <!-- checkout form END -->
-                                </div>
-                                <!-- checkout order END -->
+                                    <!-- checkout order END -->
+
+                                </form>
 
                             </div>
                             <!-- checkout END -->
