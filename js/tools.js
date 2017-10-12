@@ -593,10 +593,10 @@ function recalcCart() {
     var curDeliveryPrice = 0;
     if ($('.order-delivery-item.active').length > 0) {
         if ($('.order-delivery-item.active .delivery-price').length > 0) {
-            curDeliveryPrice = Number($('.order-delivery-item.active .delivery-price').html());
+            curDeliveryPrice = Number($('.order-delivery-item.active .delivery-price').html().replace(' ', ''));
         }
         if ($('.order-delivery-item.active .delivery-free').length > 0) {
-            var curDeliveryFree = Number($('.order-delivery-item.active .delivery-free').html());
+            var curDeliveryFree = Number($('.order-delivery-item.active .delivery-free').html().replace(' ', ''));
             if (curSumm >= curDeliveryFree) {
                 curDeliveryPrice = 0;
             }
@@ -854,7 +854,6 @@ function resizeCatalogue(curList) {
             }
         }
     }
-
     curList.find('.catalogue-item-photo').css({'min-height': '0px'});
 
     curList.find('.catalogue-item-photo').each(function() {
